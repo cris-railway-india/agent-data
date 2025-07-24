@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OPERATION UPLABDH BY RAILWAY 2025</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8faff; }
+    .header-title {
+      width: 100%;
+      text-align: center;
+      background: #0033a0;
+      color: #fff;
+      font-size: 2.4rem;
+      font-weight: bold;
+      padding: 36px 0 32px 0;
+      letter-spacing: 2px;
+      margin-bottom: 0;
+    }
+    .center-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 60vh;
+    }
+    .action-btn {
+      padding: 12px 32px;
+      font-size: 18px;
+      background-color: #0033a0;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 18px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .action-btn:hover {
+      background-color: #0057d8;
+    }
+    .form-group { margin: 16px 0; }
+    input[type="text"], input[type="password"] {
+      padding: 10px;
+      font-size: 17px;
+      width: 270px;
+      border-radius: 4px;
+      border: 1px solid #bbb;
+    }
+    #result { margin-top: 20px; font-size: 18px; font-weight: bold; }
+    ul { margin-top: 12px; font-size: 17px; font-weight: normal; color: #333; }
+    li span.label { font-weight: bold; color: #0033a0; }
+    .yes { color: green; }
+    .no, .error { color: red; }
+    .card {
+      background: #fff;
+      padding: 32px 38px;
+      border-radius: 10px;
+      box-shadow: 0 8px 32px rgba(0,0,80,0.07);
+      min-width: 340px;
+    }
+    @media (max-width: 600px) {
+      .header-title { font-size: 1.3rem; padding: 20px 0; }
+      .card { padding: 18px 8px; min-width: 0; }
+      input[type="text"], input[type="password"] { width: 90%; }
+    }
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+  <div class="header-title">
+    OPERATION UPLABDH BY RAILWAY 2025
+  </div>
+  <div class="center-box">
+    <div class="card">
+      <!-- Only Username & Password Form (Login directly) -->
+      <div id="loginForm">
+        <h2 style="text-align:center; color:#0033a0; margin-bottom:20px;">Login</h2>
+        <div class="form-group">
+          <input id="username" type="text" placeholder="User Name">
+        </div>
+        <div class="form-group">
+          <input id="password" type="password" placeholder="Password">
+        </div>
+        <button class="action-btn" onclick="login()">Sign In</button>
+        <div id="loginMsg"></div>
+      </div>
+      <!-- Mobile Number Check (hidden until login) -->
+      <div id="mobileCheck" class="hidden">
+        <h2 style="text-align:center; color:#0033a0; margin-bottom:20px;">Check Mobile Number Availability</h2>
+        <input id="mobileInput" type="text" placeholder="Enter mobile number" maxlength="10" pattern="\d{10}">
+        <button class="action-btn" onclick="checkMobile()">Check</button>
+        <div id="result"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const loginMsg = document.getElementById('loginMsg');
+      // Only allow specific credentials
+      if (username === 'rpfgondanrc' && password === 'rpf@gd') {
+        document.getElementById('loginForm').classList.add('hidden');
+        document.getElementById('mobileCheck').classList.remove('hidden');
+      } else {
+        loginMsg.innerHTML = '<span class="error">Invalid credentials. Only correct username and password will allow access.</span>';
+      }
+    }
+
+    function checkMobile() {
+      const mobile = document.getElementById('mobileInput').value.trim();
+      const resultDiv = document.getElementById('result');
+      if (!/^\d{10}$/.test(mobile)) {
+        resultDiv.innerHTML = `<span class="error">Please enter a valid 10-digit mobile number only.</span>`;
+        return;
+      }
+      if (mobile === "8957486982") {
+        resultDiv.innerHTML = `
+          <span class="yes">YES DATA IS AVAILABLE</span>
+          <ul>
+            <li><span class="label">Accused Name :</span> MOHAMMAD JUNAID</li>
+            <li><span class="label">Location :</span> Bengaluru</li>
+            <li><span class="label">Railway :</span> South Western Railway</li>
+            <li><span class="label">Page of Data :</span> 1407</li>
+            <li><span class="label">Node of Ticket :</span> 319</li>
+            <li><span class="label">Live Ticket :</span> 00</li>
+            <li><span class="label">Data Update :</span> 12/06/2025</li>
+            <li><span class="label">Number of Bank :</span> Many Accounts</li>
+            <li><span class="label">Case Status :</span> Pending</li>
+            <li><span class="label">Date of Action :</span> 16 Aug 2025</li>
+          </ul>
+        `;
+      } else if (mobile === "8112822821") {
+        resultDiv.innerHTML = `
+          <span class="yes">YES DATA IS AVAILABLE</span>
+          <ul>
+            <li><span class="label">Accused Name :</span> NEERAJ PANDEY</li>
+            <li><span class="label">Location :</span> Ayodhya</li>
+            <li><span class="label">Railway :</span> Northern Railway</li>
+            <li><span class="label">Page of Data :</span> 3166</li>
+            <li><span class="label">Node of Ticket :</span> 642</li>
+            <li><span class="label">Live Ticket :</span> 00</li>
+            <li><span class="label">Data Update :</span> 17/06/2025</li>
+            <li><span class="label">Number of Bank :</span> 6 Accounts</li>
+            <li><span class="label">Case Status :</span> Pending</li>
+            <li><span class="label">Date of Action :</span> 09 Aug 2025</li>
+          </ul>
+        `;
+      } else if (mobile === "8299653438") {
+        resultDiv.innerHTML = `
+          <span class="yes">YES DATA IS AVAILABLE</span>
+          <ul>
+            <li><span class="label">Accused Name :</span> SHIV PUJAN JAISWAL</li>
+            <li><span class="label">Location :</span> Barabanki</li>
+            <li><span class="label">Railway :</span> Northern Railway</li>
+            <li><span class="label">Page of Data :</span> 766</li>
+            <li><span class="label">Node of Ticket :</span> 94</li>
+            <li><span class="label">Live Ticket :</span> 00</li>
+            <li><span class="label">Data Update :</span> 14/06/2025</li>
+            <li><span class="label">Number of Bank :</span> MANY ACCOUNT Accounts</li>
+            <li><span class="label">Case Status :</span> Pending</li>
+            <li><span class="label">Date of Action :</span> 03 Aug 2025</li>
+          </ul>
+        `;
+      } else if (mobile === "7379447975") {
+        resultDiv.innerHTML = `
+          <span class="yes">YES DATA IS AVAILABLE</span>
+          <ul>
+            <li><span class="label">Accused Name :</span> AHZAR ALI</li>
+            <li><span class="label">Location :</span> Gonda</li>
+            <li><span class="label">Railway :</span> Northern Railway</li>
+            <li><span class="label">Page of Data :</span> 4307</li>
+            <li><span class="label">Node of Ticket :</span> 411</li>
+            <li><span class="label">Live Ticket :</span> 00</li>
+            <li><span class="label">Data Update :</span> 27/06/2025</li>
+            <li><span class="label">Number of Bank :</span> MANY ACCOUNT </li>
+            <li><span class="label">Case Status :</span> Closed</li>
+            <li><span class="label">Date of Action :</span> 24 Jul 2025</li>
+            <li><span class="label">Action Occers :</span> RPF GONDA & Western Railway Vigilant RPF & CRIS-Delhi</li>
+          </ul>
+        `;
+      } else {
+        resultDiv.innerHTML = `<span class="no">NO DATA FOUND</span>`;
+      }
+    }
+  </script>
+</body>
+</html>
